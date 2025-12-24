@@ -52,13 +52,15 @@ export function SocialProof() {
                   {logo.name}
                 </span>
               ) : (
-                <Image
-                  src={logo.src!}
-                  alt={`Logo ${logo.name}`}
-                  width={200}
-                  height={60}
-                  className="h-7 md:h-8 w-auto object-contain"
-                />
+                <div className="bg-white p-2 rounded-lg shadow-sm border border-border/50">
+                  <Image
+                    src={logo.src!}
+                    alt={`Logo ${logo.name}`}
+                    width={180}
+                    height={60}
+                    className="h-8 md:h-10 w-auto object-contain"
+                  />
+                </div>
               )}
             </a>
           ))}

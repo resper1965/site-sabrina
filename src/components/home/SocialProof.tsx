@@ -5,12 +5,12 @@ import { motion } from "framer-motion";
 
 export function SocialProof() {
   const logos = [
-    { name: "ness.", isText: true },
-    { name: "trustness.", isText: true },
-    { name: "forense.io", isText: true },
-    { name: "Ionic Health", src: "/ionic_hor_escalacinzaescuro.png" },
-    { name: "Bekaa", src: "/bekaa.png" },
-    { name: "Baalbeck", src: "/logo-baalbeck.png" },
+    { name: "ness.", isText: true, href: "https://nesshealth.com.br/" },
+    { name: "trustness.", isText: true, href: "https://trustness.com.br/" },
+    { name: "forense.io", isText: true, href: "https://forense.io/" },
+    { name: "Ionic Health", src: "/ionic_hor_escalacinzaescuro.png", href: "https://ionichealth.com/" },
+    { name: "Bekaa", src: "/bekaa.png", href: "https://www.bekaaprev.com.br/" },
+    { name: "Baalbeck", src: "/logo-baalbeck.png", href: "https://baalbeck.com.br/" },
   ];
 
   // Duplicate logos for seamless scrolling
@@ -40,9 +40,12 @@ export function SocialProof() {
           }}
         >
           {duplicatedLogos.map((logo, idx) => (
-            <div 
+            <a 
               key={`${logo.name}-${idx}`} 
-              className="flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500 hover:scale-105"
+              href={logo.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500 hover:scale-110 active:scale-95 block cursor-pointer"
             >
               {logo.isText ? (
                 <span className="text-lg md:text-2xl font-medium tracking-tight font-montserrat text-primary">
@@ -57,7 +60,7 @@ export function SocialProof() {
                   className="h-7 md:h-8 w-auto object-contain"
                 />
               )}
-            </div>
+            </a>
           ))}
         </motion.div>
         

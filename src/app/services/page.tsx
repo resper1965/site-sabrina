@@ -89,11 +89,15 @@ export default function ServicesPage() {
           <p className="text-xl text-primary-foreground/80 max-w-2xl mx-auto mb-10">
             Cada organização possui desafios únicos. Vamos desenhar uma parceria que atenda exatamente às necessidades da sua liderança.
           </p>
-          <Link href="/contact">
+          <a 
+            href="https://calendly.com/sabrina-barros" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
             <Button size="lg" variant="secondary" className="rounded-full px-10 py-7 font-bold text-lg">
               Agendar Reunião
             </Button>
-          </Link>
+          </a>
         </div>
       </section>
     </div>

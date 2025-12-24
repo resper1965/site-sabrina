@@ -35,10 +35,10 @@ export const metadata: Metadata = {
     siteName: "Sabrina Barros",
     images: [
       {
-        url: "/hero-cover.png",
-        width: 1200,
-        height: 630,
-        alt: "Sabrina Barros - Saúde & Gestão",
+        url: "/sabrinabarros-perfil.png",
+        width: 400,
+        height: 400,
+        alt: "Sabrina Barros - Conselheira de Saúde Suplementar",
       },
     ],
     locale: "pt-BR",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Sabrina Barros | Saúde & Gestão",
     description: "Insights sobre gestão, regulação e inovação na saúde suplementar.",
-    images: ["/hero-cover.png"],
+    images: ["/sabrinabarros-perfil.png"],
   },
   icons: {
     icon: "/favicon.png",

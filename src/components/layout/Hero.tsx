@@ -16,6 +16,28 @@ export function Hero() {
             transition={{ duration: 0.6 }}
             className="flex flex-col items-center text-center max-w-4xl mx-auto"
           >
+            {/* Profile Photo */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+              className="relative mb-8"
+            >
+              <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-primary/10 shadow-2xl">
+                <Image
+                  src="/sabrinabarros-perfil.png"
+                  alt="Sabrina Barros"
+                  width={160}
+                  height={160}
+                  className="object-cover w-full h-full"
+                  priority
+                />
+              </div>
+              <div className="absolute -bottom-2 -right-2 w-10 h-10 bg-primary rounded-full flex items-center justify-center shadow-lg">
+                <span className="text-white text-xs font-bold">SB</span>
+              </div>
+            </motion.div>
+
             <h1 className="text-4xl font-serif font-bold tracking-tight text-foreground sm:text-6xl mb-6">
               Sabrina Barros
             </h1>

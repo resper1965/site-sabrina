@@ -8,8 +8,8 @@ export function SocialProof() {
     { name: "ness.", isText: true, href: "https://nesshealth.com.br/" },
     { name: "trustness.", isText: true, href: "https://trustness.com.br/" },
     { name: "forense.io", isText: true, href: "https://forense.io/" },
-    { name: "Ionic Health", src: "/ionic_hor_escalacinzaescuro.png", href: "https://ionichealth.com/" },
-    { name: "Bekaa", src: "/bekaa.png", href: "https://www.bekaaprev.com.br/" },
+    { name: "Ionic Health", src: "/logo-ionic.png", href: "https://ionichealth.com/" },
+    { name: "Bekaa", src: "/logo-bekaa.png", href: "https://www.bekaaprev.com.br/" },
     { name: "Baalbeck", src: "/logo-baalbeck.png", href: "https://baalbeck.com.br/" },
   ];
 

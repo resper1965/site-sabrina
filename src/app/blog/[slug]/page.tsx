@@ -5,6 +5,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import { Clock, Tag, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { StickyCTA } from "@/components/blog/StickyCTA";
 import Script from "next/script";
 
 interface PageProps {

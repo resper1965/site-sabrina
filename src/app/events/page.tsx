@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Calendar, MapPin, Users, ExternalLink, Mic2 } from "lucide-react";
+import { Calendar, Mic2 } from "lucide-react";
 import Link from "next/link";
 
 const upcomingEvents = [

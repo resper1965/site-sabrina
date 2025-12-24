@@ -40,16 +40,15 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
           >
-            <div className="aspect-[4/5] overflow-hidden rounded-2xl bg-muted shadow-2xl">
-              <Image 
-                src="/hero-image.jpg" 
-                alt="Sabrina Barros" 
-                width={800} 
-                height={1000} 
-                className="h-full w-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700"
-                priority
-              />
-            </div>
+            <div className="relative aspect-square max-w-[500px] overflow-hidden rounded-full border-8 border-background shadow-2xl bg-muted/20">
+            <Image
+              src="/sabrinabarros-perfil.png"
+              alt="Sabrina Barros"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
             {/* Elegant Floating Elements */}
             <div className="absolute -bottom-6 -left-6 rounded-xl bg-background p-6 shadow-xl border md:block hidden">
               <div className="flex flex-col gap-1">

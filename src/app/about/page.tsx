@@ -8,13 +8,12 @@ export default function AboutPage() {
     <div className="container mx-auto px-4 py-20 lg:px-8">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
         <div className="relative">
-          <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl bg-muted">
+          <div className="aspect-square rounded-full overflow-hidden shadow-2xl bg-muted border-8 border-background relative">
             <Image 
-              src="/hero-image.jpg" 
+              src="/sabrinabarros-perfil.png" 
               alt="Sabrina Barros" 
-              width={800} 
-              height={1000} 
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
             />
           </div>
           <div className="absolute -bottom-8 -right-8 bg-accent text-accent-foreground p-8 rounded-2xl shadow-xl hidden md:block">

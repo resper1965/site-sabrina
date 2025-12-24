@@ -56,20 +56,13 @@ export default function ContactPage() {
                   <p className="text-sm font-medium">contato@sabrinabarros.com</p>
                 </div>
               </div>
-              <div className="flex gap-4">
-                <div className="text-primary"><Linkedin className="h-5 w-5" /></div>
+              <a href="https://www.linkedin.com/in/sabrina-barros/" target="_blank" rel="noopener" className="flex gap-4 group">
+                <div className="text-primary group-hover:scale-110 transition-transform"><Linkedin className="h-5 w-5" /></div>
                 <div>
                   <p className="text-xs uppercase tracking-widest text-muted-foreground font-bold">Linkedin</p>
-                  <p className="text-sm font-medium">linkdin.com/in/sabrina-barros</p>
+                  <p className="text-sm font-medium group-hover:text-primary transition-colors">linkedin.com/in/sabrina-barros</p>
                 </div>
-              </div>
-              <div className="flex gap-4">
-                <div className="text-primary"><Instagram className="h-5 w-5" /></div>
-                <div>
-                  <p className="text-xs uppercase tracking-widest text-muted-foreground font-bold">Instagram</p>
-                  <p className="text-sm font-medium">@drasabrinabarros</p>
-                </div>
-              </div>
+              </a>
             </div>
           </div>
           

@@ -65,8 +65,9 @@ export default async function BlogPostPage({ params }: PageProps) {
             Dentista e Executiva de Saúde Suplementar. Apaixonada por transformar o setor de saúde através da gestão e tecnologia.
           </p>
           <div className="flex gap-4">
-            <Button size="sm" variant="outline" className="rounded-full">Siga no Linkedin</Button>
-            <Button size="sm" variant="outline" className="rounded-full">Instagram</Button>
+            <a href="https://www.linkedin.com/in/sabrina-barros/" target="_blank" rel="noopener">
+              <Button size="sm" variant="outline" className="rounded-full">Siga no Linkedin</Button>
+            </a>
           </div>
         </div>
       </footer>

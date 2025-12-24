@@ -28,15 +28,12 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-4 text-sm uppercase tracking-wider">Redes Sociais</h4>
             <div className="flex gap-4">
-              <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                <Instagram className="h-5 w-5" />
-              </Link>
-              <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://www.linkedin.com/in/sabrina-barros/" target="_blank" rel="noopener" className="text-muted-foreground hover:text-primary transition-colors">
                 <Linkedin className="h-5 w-5" />
-              </Link>
-              <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              </a>
+              <a href="mailto:contato@sabrinabarros.com" className="text-muted-foreground hover:text-primary transition-colors">
                 <Mail className="h-5 w-5" />
-              </Link>
+              </a>
             </div>
           </div>
         </div>

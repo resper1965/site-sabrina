@@ -1,6 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { Users, CheckCircle, Target, ArrowLeft } from "lucide-react";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Mentoria Executiva",
+  description: "Desenvolvimento de lideranças e transições de carreira no setor de saúde suplementar. Mentoria individual e corporativa com Sabrina Barros.",
+  openGraph: {
+    title: "Mentoria Executiva | Sabrina Barros",
+    description: "Desenvolvimento de lideranças e transições de carreira no setor de saúde suplementar.",
+  },
+};
 
 const benefits = [
   "Desenvolvimento de lideranças estratégicas em saúde",

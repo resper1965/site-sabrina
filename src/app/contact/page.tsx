@@ -1,5 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { Linkedin, Mail, Calendar, MessageCircle } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contato",
+  description: "Agende uma reunião com Sabrina Barros ou envie uma mensagem. Calendly para reuniões estratégicas sobre saúde suplementar.",
+  openGraph: {
+    title: "Contato | Sabrina Barros",
+    description: "Agende uma reunião ou envie uma mensagem sobre consultoria em saúde suplementar.",
+  },
+};
 
 export default function ContactPage() {
   return (

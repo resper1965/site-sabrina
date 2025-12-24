@@ -1,6 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { Shield, CheckCircle, Briefcase, ArrowLeft } from "lucide-react";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Conselheira Estratégica",
+  description: "Atuação em conselhos de administração e comitês de saúde. Visão independente e técnica para decisões críticas de governança.",
+  openGraph: {
+    title: "Conselheira Estratégica | Sabrina Barros",
+    description: "Atuação em conselhos e comitês de saúde com visão técnica e independente.",
+  },
+};
 
 const benefits = [
   "Visão independente e técnica em decisões críticas",

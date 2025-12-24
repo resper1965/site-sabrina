@@ -1,6 +1,16 @@
 import { Button } from "@/components/ui/button";
-import { Calendar, Mic2 } from "lucide-react";
+import { Mic2 } from "lucide-react";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Palestras & Eventos",
+  description: "Palestras sobre saúde suplementar, RN 623, sinistralidade comportamental e gestão estratégica. Convide Sabrina Barros para seu evento.",
+  openGraph: {
+    title: "Palestras & Eventos | Sabrina Barros",
+    description: "Palestras sobre saúde suplementar e gestão estratégica para congressos e eventos corporativos.",
+  },
+};
 
 const upcomingEvents = [
   {

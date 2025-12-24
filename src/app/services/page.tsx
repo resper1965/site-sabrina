@@ -1,6 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { Shield, Users, BarChart3, TrendingUp, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Serviços Estratégicos",
+  description: "Consultoria em saúde suplementar: Conselheira Estratégica, Mentoria Executiva, RN 623 e Auditoria Comportamental. Agende uma reunião.",
+  openGraph: {
+    title: "Serviços Estratégicos | Sabrina Barros",
+    description: "Consultoria em saúde suplementar para empresas e executivos.",
+  },
+};
 
 const services = [
   {

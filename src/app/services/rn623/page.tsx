@@ -1,6 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { Shield, CheckCircle, AlertTriangle, FileText, ArrowLeft } from "lucide-react";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Gestão de Crise e Riscos (RN 623)",
+  description: "Adequação à RN 623/2024 da ANS. Transforme conformidade regulatória em vantagem competitiva. Consultoria especializada em saúde suplementar.",
+  openGraph: {
+    title: "RN 623/2024: Gestão de Crise e Riscos | Sabrina Barros",
+    description: "Adequação à nova regulação da ANS. Transforme conformidade em vantagem competitiva.",
+  },
+};
 
 const benefits = [
   "Adequação completa aos prazos da ANS",

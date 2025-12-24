@@ -1,6 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { TrendingUp, CheckCircle, BarChart3, ArrowLeft } from "lucide-react";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Auditoria de Valor Comportamental",
+  description: "Análise de sinistralidade que cruza dados clínicos com padrões comportamentais. Descubra a verdadeira causa da variação de custos em saúde.",
+  openGraph: {
+    title: "Auditoria de Valor Comportamental | Sabrina Barros",
+    description: "Análise comportamental para otimização de custos em saúde suplementar.",
+  },
+};
 
 const benefits = [
   "Identificação de padrões ocultos de uso do plano",

@@ -4,12 +4,13 @@ import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/card"
 import { Clock, Tag } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export default function BlogPage({ searchParams }: { searchParams: { category?: string } }) {
+export default async function BlogPage({ searchParams }: { searchParams: Promise<{ category?: string }> }) {
+  const { category } = await searchParams;
   const allPosts = getAllPosts();
   const categories = Array.from(new Set(allPosts.map((p) => p.category)));
   
-  const filteredPosts = searchParams.category 
-    ? allPosts.filter(p => p.category === searchParams.category)
+  const filteredPosts = category 
+    ? allPosts.filter(p => p.category === category)
     : allPosts;
 
   return (
@@ -23,7 +24,7 @@ export default function BlogPage({ searchParams }: { searchParams: { category?: 
         <div className="flex flex-wrap gap-2">
           <Link href="/blog">
             <Button 
-              variant={!searchParams.category ? "default" : "outline"} 
+              variant={!category ? "default" : "outline"} 
               size="sm" 
               className="rounded-full"
             >
@@ -33,7 +34,7 @@ export default function BlogPage({ searchParams }: { searchParams: { category?: 
           {categories.map((cat) => (
             <Link key={cat} href={`/blog?category=${cat}`}>
               <Button 
-                variant={searchParams.category === cat ? "default" : "outline"} 
+                variant={category === cat ? "default" : "outline"} 
                 size="sm" 
                 className="rounded-full"
               >

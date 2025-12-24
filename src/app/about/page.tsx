@@ -70,10 +70,11 @@ export default function AboutPage() {
             {[
               {
                 company: "MARSH",
+                companyUrl: "https://www.marsh.com/pt-br/home.html",
                 role: "Gerente de Relacionamento Especialista",
                 period: "2026 - Atual",
                 description: [
-                  "Atuação consultiva junto a grandes empresas na estruturação e gestão de programas de benefícios de saúde.",
+                  "Gestão de carteira de clientes globais, com atuação consultiva na estruturação de programas de benefícios de saúde.",
                   "Inteligência de dados aplicada à otimização de custos e melhoria da experiência do beneficiário."
                 ]
               },
@@ -150,7 +151,13 @@ export default function AboutPage() {
                 <div>
                   <time className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary/60 mb-2 block">{exp.period}</time>
                   <h3 className="text-lg font-bold text-foreground/90">{exp.role}</h3>
-                  <p className="text-primary/80 font-medium text-sm mb-4">{exp.company}</p>
+                  {'companyUrl' in exp && exp.companyUrl ? (
+                    <a href={exp.companyUrl} target="_blank" rel="noopener noreferrer" className="text-primary/80 font-medium text-sm mb-4 block hover:text-primary hover:underline transition-colors">
+                      {exp.company} ↗
+                    </a>
+                  ) : (
+                    <p className="text-primary/80 font-medium text-sm mb-4">{exp.company}</p>
+                  )}
                   {exp.description.length > 0 && (
                     <ul className="space-y-2">
                       {exp.description.map((item, i) => (

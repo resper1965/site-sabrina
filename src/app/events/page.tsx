@@ -75,6 +75,44 @@ export default function EventsPage() {
           ))}
         </section>
 
+        {/* Suggested Topics */}
+        <section className="mb-20">
+          <h2 className="text-2xl font-serif font-bold mb-8">Temas Sugeridos para Palestras</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {[
+              {
+                title: "RN 623/2024: Da Conformidade à Vantagem Competitiva",
+                description: "Como transformar a nova regulação da ANS em diferencial de mercado"
+              },
+              {
+                title: "Sinistralidade Comportamental",
+                description: "A análise de padrões que revela a verdadeira causa dos custos em saúde"
+              },
+              {
+                title: "O Executivo e o Plano de Saúde",
+                description: "Por que líderes precisam entender de gestão de benefícios"
+              },
+              {
+                title: "Do Operacional ao Estratégico em RH",
+                description: "Posicionando a área de benefícios como pilar de retenção de talentos"
+              },
+              {
+                title: "Governança em Saúde Suplementar",
+                description: "Estruturando conselhos e comitês para decisões baseadas em evidências"
+              },
+              {
+                title: "Telemedicina e o Futuro do Cuidado",
+                description: "Impactos regulatórios e oportunidades para operadoras e empresas"
+              }
+            ].map((topic, idx) => (
+              <div key={idx} className="p-5 rounded-2xl border border-border bg-white hover:border-primary/30 transition-colors">
+                <h3 className="font-bold mb-2">{topic.title}</h3>
+                <p className="text-sm text-muted-foreground">{topic.description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
         {/* Past Events */}
         <section>
           <h2 className="text-2xl font-serif font-bold mb-8">Participações Anteriores</h2>

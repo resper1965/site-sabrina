@@ -20,7 +20,7 @@ export function SocialProof() {
           {logos.map((logo) => (
             <div key={logo.name} className="flex items-center justify-center group transform transition-all hover:scale-105">
               {logo.isText ? (
-                <span className="text-2xl md:text-3xl font-medium tracking-tight font-montserrat text-primary/70 group-hover:text-primary transition-colors">
+                <span className="text-lg md:text-2xl font-medium tracking-tight font-montserrat text-primary/70 group-hover:text-primary transition-colors">
                   {logo.name}
                 </span>
               ) : (
@@ -29,7 +29,7 @@ export function SocialProof() {
                   alt={`Logo ${logo.name}`}
                   width={200}
                   height={60}
-                  className="h-10 md:h-12 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity"
+                  className="h-7 md:h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity"
                 />
               )}
             </div>

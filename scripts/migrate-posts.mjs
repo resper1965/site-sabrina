@@ -30,47 +30,55 @@ async function scrapePost(url) {
         const dateElement = doc.querySelector('time') || doc.querySelector('meta[property="article:published_time"]');
         const date = dateElement?.getAttribute('datetime') || dateElement?.getAttribute('content') || new Date().toISOString();
 
-        // Comprehensive list of selectors for Sabrina's various Elementor and WP structures
-        const selectors = [
-            '.elementor-widget-theme-post-content',
-            '.elementor-676 .elementor-widget-container',
-            '.elementor-676 .e-con-inner',
-            '.entry-content',
-            '.elementor-location-single',
-            '.elementor-page',
-            'article',
-            'main'
+        // Aggressive content discovery strategy
+        const candidates = [
+            ...doc.querySelectorAll('.elementor-widget-theme-post-content'),
+            ...doc.querySelectorAll('.elementor-widget-container'),
+            ...doc.querySelectorAll('.entry-content'),
+            ...doc.querySelectorAll('article'),
+            ...doc.querySelectorAll('.e-con-inner'),
+            ...doc.querySelectorAll('main')
         ];
 
         let contentElement = null;
-        for (const selector of selectors) {
-            const el = doc.querySelector(selector);
-            // Ensure the element actually contains some content text
-            if (el && el.textContent.trim().length > 200) {
+        let maxContentLength = 0;
+
+        for (const el of candidates) {
+            // Clean clone for evaluation
+            const clone = el.cloneNode(true);
+            const toRemove = clone.querySelectorAll('script, style, nav, header, footer, .rek-social-share, .elementor-button-wrapper, .rek-author-box');
+            toRemove.forEach(r => r.remove());
+
+            const textLength = clone.textContent.trim().length;
+            if (textLength > maxContentLength && textLength > 300) {
+                maxContentLength = textLength;
                 contentElement = el;
-                break;
             }
         }
 
         if (!contentElement) {
-            console.log(`Skipping ${url}: Content not found or too short`);
+            console.log(`Skipping ${url}: No valid content container found (max length: ${maxContentLength})`);
             return null;
         }
 
-        // Comprehensive clean up of UI/Theme elements
+        // Comprehensive clean up of UI/Theme elements in the chosen container
         const selectorsToRemove = [
             '.wp-block-rank-math-toc-block',
             '.elementor-button-wrapper',
             '.rek-social-share',
             '.elementor-post-navigation',
             '.elementor-widget-heading',
-            '.elementor-widget-image', // Usually featured image or ads
+            '.elementor-widget-image',
             'header',
             'footer',
             '.wpr-sharing-buttons',
             '#rank-math-toc',
             '.rek-author-box',
-            '.elementor-widget-button'
+            '.elementor-widget-button',
+            '.elementor-widget-video',
+            'nav',
+            'script',
+            'style'
         ];
         selectorsToRemove.forEach(sel => {
             contentElement.querySelectorAll(sel).forEach(el => el.remove());

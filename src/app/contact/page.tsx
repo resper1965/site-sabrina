@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Linkedin, Mail, Calendar, MessageCircle } from "lucide-react";
 
 export default function ContactPage() {
@@ -36,46 +35,22 @@ export default function ContactPage() {
           </div>
         </div>
 
-        {/* Option 2: Message Form */}
-        <div className="border border-border rounded-3xl p-10 bg-white">
-          <div className="inline-flex p-3 bg-primary/5 rounded-xl mb-6 text-primary">
+        {/* Option 2: Send Message via Email */}
+        <a 
+          href="mailto:contato@sabrinabarros.com"
+          className="border border-border rounded-3xl p-10 bg-white hover:shadow-xl transition-all group block"
+        >
+          <div className="inline-flex p-3 bg-primary/5 rounded-xl mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
             <MessageCircle className="h-8 w-8" />
           </div>
-          <h2 className="text-2xl font-serif font-bold mb-3">Enviar Mensagem</h2>
+          <h2 className="text-2xl font-serif font-bold mb-3 group-hover:text-primary transition-colors">Enviar Mensagem</h2>
           <p className="text-muted-foreground mb-6 text-sm">
-            Perguntas, propostas ou apenas dizer olá. Respondo em até 48h.
+            Perguntas, propostas ou apenas dizer olá. Clique para abrir seu e-mail.
           </p>
-          
-          <form 
-            action="https://formspree.io/f/xzzdpqkv" 
-            method="POST"
-            className="space-y-4"
-          >
-            <Input 
-              type="text" 
-              name="name" 
-              placeholder="Seu nome" 
-              required
-              className="rounded-xl h-11"
-            />
-            <Input 
-              type="email" 
-              name="email" 
-              placeholder="seu@email.com" 
-              required
-              className="rounded-xl h-11"
-            />
-            <textarea 
-              name="message"
-              placeholder="Sua mensagem..."
-              required
-              className="w-full min-h-[100px] rounded-xl border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-            ></textarea>
-            <Button type="submit" className="w-full rounded-xl font-bold">
-              Enviar Mensagem
-            </Button>
-          </form>
-        </div>
+          <Button className="w-full rounded-xl font-bold">
+            Abrir E-mail
+          </Button>
+        </a>
       </div>
 
       {/* Secondary Options */}
